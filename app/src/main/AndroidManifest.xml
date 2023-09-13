@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AminMasalhaProj"
         tools:targetApi="31">
         <activity
+            android:name=".homepage"
+            android:exported="false" />
+        <activity
             android:name=".SignupActivity"
             android:exported="false" />
         <activity
