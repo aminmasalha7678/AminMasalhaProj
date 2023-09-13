@@ -52,8 +52,9 @@ public class LoginActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     FirebaseUser user = mAuth.getCurrentUser();
-
-                                    startActivity(new Intent(LoginActivity.this,homepage.class));
+                                    Intent intent= new Intent(LoginActivity.this,homepage.class);
+                                    intent.putExtra("UserName",user.getDisplayName());
+                                    startActivity(intent);
 
                                 } else {
                                     error.setVisibility(View.VISIBLE);
