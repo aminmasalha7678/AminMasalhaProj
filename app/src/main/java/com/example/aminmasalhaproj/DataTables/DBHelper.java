@@ -1,7 +1,7 @@
-package com.example.haifaproject2.DataTables;
+package com.example.aminmasalhaproj.DataTables;
 
-import static com.example.haifaproject2.DataTables.QueryString.*;
-import static com.example.haifaproject2.DataTables.TablesString.ProductTable.*;
+import static com.example.aminmasalhaproj.DataTables.QueryString.*;
+import static com.example.aminmasalhaproj.DataTables.TablesString.ProductTable.*;
 
 import android.annotation.SuppressLint;
 import android.content.ContentResolver;

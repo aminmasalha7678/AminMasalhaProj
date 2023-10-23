@@ -1,10 +1,10 @@
-package com.example.haifaproject2.DataTables;
-import com.example.haifaproject2.DataTables.TablesString.*;
+package com.example.aminmasalhaproj.DataTables;
+import com.example.aminmasalhaproj.DataTables.TablesString.*;
 public class QueryString {
 
 
     //region Create Tables
-    public static final String SQL_CREATE_PRODUCT =
+    public static final String SQL_CREATE_PLAYER =
             "CREATE TABLE " + ProductTable.TABLE_PRODUCT + " (" +
                     ProductTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                     ProductTable.COLUMN_PRODUCT_NAME + " TEXT," +

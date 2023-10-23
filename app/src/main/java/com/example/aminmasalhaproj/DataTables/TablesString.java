@@ -1,4 +1,4 @@
-package com.example.haifaproject2.DataTables;
+package com.example.aminmasalhaproj.DataTables;
 
 import android.provider.BaseColumns;
 

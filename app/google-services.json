@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "189839968785",
+    "project_id": "aminmasalhaproj",
+    "storage_bucket": "aminmasalhaproj.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:189839968785:android:8c6b715aa659b11c997fb0",
+        "android_client_info": {
+          "package_name": "com.example.aminmasalhaproj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "189839968785-8vpku78cuhv4lb1pm2a6qdiofinkdbev.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTBzebgEhXx-MMZNb6qaKokMETC_ZY1Ws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "189839968785-8vpku78cuhv4lb1pm2a6qdiofinkdbev.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

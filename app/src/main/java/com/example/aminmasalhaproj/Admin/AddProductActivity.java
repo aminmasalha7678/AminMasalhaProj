@@ -1,4 +1,4 @@
-package com.example.aminmasalhaproj;
+package com.example.aminmasalhaproj.Admin;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
@@ -13,9 +13,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-import com.example.haifaproject2.Classes.Product;
-import com.example.haifaproject2.DataTables.DBHelper;
-import com.example.haifaproject2.R;
+import com.example.aminmasalhaproj.Classes.Product;
+import com.example.aminmasalhaproj.DataTables.DBHelper;
+import com.example.aminmasalhaproj.R;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 

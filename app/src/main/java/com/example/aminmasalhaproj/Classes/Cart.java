@@ -1,6 +1,6 @@
 package com.example.aminmasalhaproj.Classes;
 
-import static com.example.haifaproject2.DataTables.TablesString.CartTable.*;
+import static com.example.aminmasalhaproj.DataTables.TablesString.CartTable.*;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;

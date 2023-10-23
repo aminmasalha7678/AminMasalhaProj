@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -34,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         loginButton=findViewById(R.id.loginPageBt);
         createAnAcc=findViewById(R.id.create_acc);
         error=findViewById(R.id.login_error);
+
         createAnAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     FirebaseUser user = mAuth.getCurrentUser();
-                                    Intent intent= new Intent(LoginActivity.this,homepage.class);
+                                    Intent intent= new Intent(LoginActivity.this,HomeActivity.class);
                                     intent.putExtra("UserName",user.getDisplayName());
                                     startActivity(intent);
 

@@ -1,13 +1,14 @@
 package com.example.aminmasalhaproj.Classes;
 
-import static com.example.haifaproject2.DataTables.TablesString.ProductTable.*;
+import static com.example.aminmasalhaproj.DataTables.TablesString.ProductTable.*;
 
 
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Bitmap;
 import android.provider.BaseColumns;
+
+import java.util.Arrays;
 
 public class Product implements SqlInterface{
 
@@ -18,10 +19,22 @@ public class Product implements SqlInterface{
     protected int stock;
     protected double saleprice;
     protected double buyprice;
+
+
     protected byte[] imageByte;
     //endregion
 
+
     //region Constructors
+    public Product(Product p) {
+        pid = p.getPid();
+        prodname = p.getProdname();
+        proddisc = p.getProddisc();
+        stock = p.getStock();
+        saleprice = p.getSaleprice();
+        buyprice = p.getBuyprice();
+        imageByte = p.getImageByte();
+    }
     public Product(String prodname,String proddisc,int stock,double saleprice,double buyprice,byte[] image){
         this.saleprice=saleprice;
         this.buyprice=buyprice;
@@ -30,10 +43,24 @@ public class Product implements SqlInterface{
         this.stock=stock;
         this.imageByte = image;
     }
-   //endregion
+
+    public Product(int pid, String prodname, String proddisc, int stock, double saleprice, double buyprice, byte[] imageByte) {
+        this.pid = pid;
+        this.prodname = prodname;
+        this.proddisc = proddisc;
+        this.stock = stock;
+        this.saleprice = saleprice;
+        this.buyprice = buyprice;
+        this.imageByte = imageByte;
+    }
+
+    public Product() {
+    }
+    //endregion
 
     //region Add,Delete,Update,Select Sql
-    @Override
+
+
     public long Add(SQLiteDatabase db) {
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
@@ -83,6 +110,8 @@ public class Product implements SqlInterface{
 
     }
 
+
+
     @Override
     public Cursor Select(SQLiteDatabase db) {
         String[] projection = {
@@ -94,16 +123,39 @@ public class Product implements SqlInterface{
                 COLUMN_PRODUCT_SALEPRICE,
                 COLUMN_PRODUCT_BUYPRICE
         };
-// How you want the results sorted in the resulting Cursor
-        String sortOrder =
-                BaseColumns._ID + " DESC";
+
         Cursor c = db.query(TABLE_PRODUCT,
                 projection,
                 null,
                 null,
                 null,
                 null,
-                sortOrder);
+                null);
+        return c;
+    }
+
+    //change
+    public Cursor SelectById(SQLiteDatabase db,String id) {
+        String[] projection = {
+                BaseColumns._ID,
+                COLUMN_PRODUCT_NAME,
+                COLUMN_PRODUCT_DESCRIPTION,
+                COLUMN_PRODUCT_IMAGE,
+                COLUMN_PRODUCT_STOCK,
+                COLUMN_PRODUCT_SALEPRICE,
+                COLUMN_PRODUCT_BUYPRICE
+        };
+        String selection = BaseColumns._ID + " = ?";
+        String[] selectionArgs = {id};
+
+        Cursor c = db.query(
+                TABLE_PRODUCT,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                selection,              // The columns for the WHERE clause
+                selectionArgs,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                null  );
         return c;
     }
 
@@ -156,6 +208,19 @@ public class Product implements SqlInterface{
 
     public void setBuyprice(double buyprice) {
         this.buyprice = buyprice;
+    }
+    public byte[] getImageByte() {
+        return imageByte;
+    }
+
+    public void setImageByte(byte[] imageByte) {
+        this.imageByte = imageByte;
+    }
+
+
+    @Override
+    public String toString() {
+        return  prodname;
     }
     //endregion
 

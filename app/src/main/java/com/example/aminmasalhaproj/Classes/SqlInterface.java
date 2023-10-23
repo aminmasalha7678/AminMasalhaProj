@@ -1,4 +1,4 @@
-package com.example.haifaproject2.Classes;
+package com.example.aminmasalhaproj.Classes;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;

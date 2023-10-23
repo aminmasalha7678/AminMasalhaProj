@@ -1,6 +1,6 @@
 package com.example.aminmasalhaproj.Classes;
 
-import static com.example.haifaproject2.DataTables.TablesString.SaleTable.*;
+import static com.example.aminmasalhaproj.DataTables.TablesString.SaleTable.*;
 
 import android.content.ContentValues;
 import android.database.Cursor;
